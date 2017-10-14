@@ -10,6 +10,7 @@ namespace RazorPractice.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Index Page";
             return View();
         }
 
