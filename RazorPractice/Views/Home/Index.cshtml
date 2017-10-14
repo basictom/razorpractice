@@ -6,13 +6,18 @@
 
 @{ 
     var names = new List<string> { "Thomas", "James", "Aldo Apache", "Marcus" };
+    string UserName = names[0];
+    string Greeting = "Fuck off";
 }
 
 
 
 <div class="row">
     <div class="col-md-10">
-        <h2>People</h2>
+        <h2>
+            People
+        </h2>
+        <p>@Greeting, @UserName.</p>
         <p>
             <ul>
                 @{
@@ -24,6 +29,20 @@
                 
             </ul>
 
+
         </p>
+        @{ 
+            DayOfWeek day = DateTime.Now.DayOfWeek;
+            if (day == DayOfWeek.Friday)
+            {
+                <h4>TGIF!!!</h4>
+            }
+            else
+            {
+                <h4>Today is: @day</h4>
+            }
+        }
+        
+        
     </div>
 </div>
